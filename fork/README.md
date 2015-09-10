@@ -36,7 +36,8 @@ Aqui es donde llega la magia.
 Despues de invocado el `fork()` se crean dos procesos exactamente iguales en el sistema operativo **con espacios de direcciones diferentes**. Un proceso tendra en su variable `pid` el valor de `0` (el hijo) y otro tendra un valor diferente de `0` (el padre). 
 De esta manera el padre podra saber cual es el identificador de proceso (`pid`) de su hijo.
 
-Corte y pegue ese codigo en un archivo .c, ejemplo `fork\_101.c` y ejecutelo
+Corte y pegue ese codigo en un archivo .c, ejemplo `fork_101.c` y ejecutelo
+
 	gcc fork_101.c -o fork_101
 	./fork_101
 
