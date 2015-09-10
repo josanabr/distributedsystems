@@ -88,7 +88,7 @@ This time the program is doing what we expect it has to do.
 
 The program has a little difference with the previous program.
 
-### Fifth assignment
+### Assignment
 
 - What is the difference between 3s-03.c and 3s-04.c?
 - Compare elapsed time per thread during the counting process **and** the total time that all  threads took for counting the number of 3s in the whole array. Run every program (3s-03 and 3s-04) three times and compute the average time per program. Present your results and explain them.
@@ -97,12 +97,12 @@ The program has a little difference with the previous program.
 
 This time this solution is correct and exhibits a better performance when it is compared with the previous  programs. 
 
-### Sixth assignment
+### Assignment
 
 - Where the success of this program resides?
 - Compare this program execution and compare its performance with previous instances and write your observations.
 
-## Big assignment
+## Final assignment
 
 Implement the **Fourth Solution: Try 4** found in page 20 and compare the performance of your implementation with previous programs.
 
