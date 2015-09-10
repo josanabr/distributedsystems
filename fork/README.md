@@ -15,7 +15,7 @@ no se comparten
 - `fork.c`, `forfork.c` algunos codigos para evaluar que tanto entendiste la funcion `fork()`.
 
 ## Una breve introduccion al `fork()`
-#include "fork\_101.c"
+{{fork\_101.c"}}
 
 ## Ejecutando el codigo
 ### fork\_00
