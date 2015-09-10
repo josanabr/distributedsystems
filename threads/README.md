@@ -3,7 +3,7 @@
 
 ### A gentle introduction
 
-The first example is `thread_101_1.c`. This program exhibits how interact with fpthread methods such as `pthread_create` and `pthread_join`.
+The first example is `thread_101_1.c`. This program exhibits how interact with pthread methods such as `pthread_create` and `pthread_join`.
 
 In order to compile the program run the following command
 `gcc -pthread thread_101_1.c -o thread_101_1`
@@ -19,9 +19,11 @@ Try the program several times.
 
 - All the executions were equal?
 
-### Anothe example from Principles of Parallel Programming book
+### Another example of using threads
 
-In chapter one of the book "Principles of Parallel Programming", a trivial example using threads is presented. The problem is to count the number of times that the number "3" is in a given array.
+In chapter one of the book "Principles of Parallel Programming", a trivial example using threads is presented. The problem is to count the number of times that the number "3" is present in a given array. 
+
+Example if the input array is `[10, 3, 15, 4, 10, 3, 2, -1]` the program should return `2`.
 
 In this directory you find different C programs to present the code that should help you on understanding the section "Parallelism Using Multiple Instruction Streams" in the aforementioned chapter. As follows a description of every program is given.
 
@@ -42,9 +44,9 @@ This program presents a sequential solution of the problem stated in chapter one
 - Initialize and populate a large vector with random numbers.
 - Count in the initialized vector the number of 3s in it.
 
-### First assignment 
+### Assignment 
 
-Add the proper code sentences that allow you to determine how much time the program spends during the process of:
+Add the proper code sentences that allow you to determine how much time the program spends during:
 
 - Vector initialization.
 - Counting the number of 3s in a given vector.
@@ -54,7 +56,7 @@ Add the proper code sentences that allow you to determine how much time the prog
 This program uses threads in order to divide the task of counting 3s in a given vector amongst different "working units", a.k.a. *threads*. 
 Read and understand what this program does.
 
-### Second assignment
+### Assignment
 
 Include the code sentences used to estimate how much time takes to each thread to count the number of 3s in a given array.  
 
@@ -67,17 +69,18 @@ Answer the following questions
 
 This version of the program is more accurate but it is not completely correct.
 
-### Third assignment
+### Assignment
 
 - Include the code sentences used to estimate how much time takes to each thread to count the number of 3s in a given array.
 - What is wrong with this code this time?
 
 ## 3s-03.c
 
-This time the program is doing what we expect it has to do.
+This time the program is doing what we expect it has to do. 
 
-### Fourth assignment
+### Assignment
 
+- Identify why this program is now doing right.
 - Include the code sentences used to estimate how much time takes to each thread to count the number of 3s in a segment of the full array.    
 - How much time took to obtain the total count of 3s in the whole array.
 
