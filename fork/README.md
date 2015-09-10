@@ -15,7 +15,7 @@ no se comparten
 - `fork.c`, `forfork.c` algunos codigos para evaluar que tanto entendiste la funcion `fork()`.
 
 ## Una breve introduccion al `fork()`
-{{fork\_101.c"}}
+{{fork\_101.c}}
 
 ## Ejecutando el codigo
 ### fork\_00
@@ -24,14 +24,14 @@ Este codigo pretende mostrar que una vez un programa en C invoca la funcion `for
 El estudiante debera ejecutar los siguientes pasos:
 - Compilar el codigo y luego ejecutarlo
 	- Ejecute el comando `make all`
-	- Ejecute el comando `./run.sh fork\_00`
+	- Ejecute el comando `./run.sh fork_00`
 	- Explique lo que observa
 
-- Edite el archivo `fork\_00.c` y encuentre un comentario en el  codigo numerado
+- Edite el archivo `fork_00.c` y encuentre un comentario en el  codigo numerado
 con el valor `1.`. Proceda a descomentar las lineas y repita los pasos del item
 1- en este documento
 
-- Edite el archivo `fork\_00.c` y encuentre un comentario en el codigo numerado
+- Edite el archivo `fork_00.c` y encuentre un comentario en el codigo numerado
 con el valor `2.`. Proceda a descomentar las lineas y repita los pasos del item
 1- en este documento
 
@@ -39,7 +39,7 @@ con el valor `2.`. Proceda a descomentar las lineas y repita los pasos del item
 Este codigo muestra como procesos creados con la instruccion `fork()` **NO 
 comparten variables**. El estudiante debera 
 - Compilar el programa `fork_01.c`, `make fork_01`
-- Ejecutar el programa `fork\_01`, `./fork\_01`
+- Ejecutar el programa `fork_01`, `./fork_01`
 - Que observa?
 
 ## Tarea
