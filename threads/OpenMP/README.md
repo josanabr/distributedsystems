@@ -23,6 +23,14 @@ Este programa se ejecuta bajo tres interacciones.
 
 * `parallelfor_00.c` En este programa se muestra la paralelización de un ciclo `for` pero además muestra una directiva de compilación llamada `reduction` que permite consolidar el valor parcial de diferentes hilos en una sola variable.
 
+## Ejercicios propuestos
+
+Ud. encontrará dos programas en C que sirven para calcular el valor de Pi.
+
+* `pi.c` usa una aproximación a través del cálculo del área bajo la curva. La [gráfica](https://drive.google.com/open?id=0B7n65I8SStKXZXRZdnRxMlV2V00) muestra la aproximación que sigue el programa `.c`.
+
+* `montecarlopi.c` usa una aproximación basada en el método Monte Carlo para de forma aleatoria se llegue a la estimación del valor de Pi.
+
 ## Recursos
 
 La información de los ejemplos en este repositorio se tomaron de diversas fuentes que se listan a continuación.
