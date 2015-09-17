@@ -31,6 +31,8 @@ Ud. encontrará dos programas en C que sirven para calcular el valor de Pi.
 
 * `montecarlopi.c` usa una aproximación basada en el método Monte Carlo para de forma aleatoria se llegue a la estimación del valor de Pi.
 
+Ud. deberá incluir las instrucciones en OpenMP que transforme estas versiones secuenciales del cálculo de Pi en versiones que se ejecuten en paralelo.
+
 ## Recursos
 
 La información de los ejemplos en este repositorio se tomaron de diversas fuentes que se listan a continuación.
