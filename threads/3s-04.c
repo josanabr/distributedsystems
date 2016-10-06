@@ -13,7 +13,6 @@ int *array;
 int length = VECTOR_SIZE;
 int count = 0;
 int double_count = 0;
-int t = MAX_THREADS;
 int max_threads = 0;
 
 void *count3s_thread(void *arg) {
@@ -31,6 +30,7 @@ void *count3s_thread(void *arg) {
 			pthread_mutex_unlock(&mutex);
 		}
 	}
+	return NULL;
 }
 
 
