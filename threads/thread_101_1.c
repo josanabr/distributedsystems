@@ -17,10 +17,10 @@ int main() {
 	}
 	while (++y < MAX);
 	printf("y increment finished\n");
-/*	if (pthread_join(inc_x_thread, NULL)) {
+	if (pthread_join(inc_x_thread, NULL)) {
 		fprintf(stderr, "Error joining thread\n");
 		return 2;
-	}*/
+	}
 	printf("x: %d, y: %d\n", x, y);
 
 	return 0;
