@@ -11,10 +11,10 @@ pthread_mutex_t mutex;
 
 int *array;
 int length = VECTOR_SIZE;
+// Definicion de contadores privados para cada hilo
 int private_count[MAX_THREADS];
 int count = 0;
 int double_count = 0;
-int t = MAX_THREADS;
 int max_threads = 0;
 
 void *count3s_thread(void *arg) {
@@ -33,6 +33,7 @@ void *count3s_thread(void *arg) {
 	pthread_mutex_lock(&mutex);
 	count = count + private_count[id];
 	pthread_mutex_unlock(&mutex);
+	return NULL;
 }
 
 
@@ -74,6 +75,7 @@ int main(int argc, char *argv[]) {
 	fflush(stdout);
 	t1 = clock();
 	pthread_mutex_init(&mutex,NULL);
+	// bucle usado para crear los hilos
 	while (i < max_threads) {
 		private_count[i] = 0;
 		err = pthread_create(&tid[i], NULL, &count3s_thread, (void*)i);
@@ -85,6 +87,7 @@ int main(int argc, char *argv[]) {
 	}
 	// https://computing.llnl.gov/tutorials/pthreads/#Joining
 	i = 0;
+	// bucle usado para esperar por la terminacion de los hilos
 	for (; i < max_threads; i++) {
 		void *status;
 		int rc;
