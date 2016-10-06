@@ -6,13 +6,15 @@
 #define MAX_THREADS 8
 #define VECTOR_SIZE 1000000000
 
+// Vector de identificadores de hilos
 pthread_t tid[MAX_THREADS];
 
+// Un apuntador a un vector de enteros
 int *array;
+// Maxima longitud del vector
 int length = VECTOR_SIZE;
 int count = 0;
 int double_count = 0;
-int t = MAX_THREADS;
 int max_threads = 0;
 
 void *count3s_thread(void *arg) {
@@ -27,6 +29,7 @@ void *count3s_thread(void *arg) {
 			count++;
 		}
 	}
+	return NULL;
 }
 
 
@@ -66,7 +69,9 @@ int main(int argc, char* argv[]) {
 	initialize_vector();
 	printf("Vector initialized!\n");
 	fflush(stdout);
+	// Se comienza a contabilizar el tiempo transcurrido
 	t1 = clock();
+	// Bucle para crear hilos
 	while (i < max_threads) {
 		err = pthread_create(&tid[i], NULL, &count3s_thread, (void*)i);
 		if (err != 0) 
@@ -77,6 +82,7 @@ int main(int argc, char* argv[]) {
 	}
 	// https://computing.llnl.gov/tutorials/pthreads/#Joining
 	i = 0;
+	// Bucle para esperar por la terminacion de los hilos
 	for (; i < max_threads; i++) {
 		void *status;
 		int rc;
