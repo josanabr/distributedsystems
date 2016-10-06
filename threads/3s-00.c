@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define VECTOR_SIZE 1000000000
+#define VECTOR_SIZE 100000000
 
 // Variables globales
 int *array;

@@ -4,7 +4,7 @@
 #include <time.h>
 
 #define MAX_THREADS 8
-#define VECTOR_SIZE 1000000000
+#define VECTOR_SIZE 100000000
 
 pthread_t tid[MAX_THREADS]; 
 // Definicion de un candado para arbitrar el acceso
