@@ -3,17 +3,15 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_THREADS 4
 #define VECTOR_SIZE 1000000000
 
-pthread_t tid[MAX_THREADS];
-
+// Variables globales
 int *array;
 int count = 0;
 int double_count = 0;
-int max_threads = 0;
 
-
+// -=*=- FUNCIONES AUXILIARES -=*=-
+// Inicializar vector
 void initialize_vector() {
 	int i = 0;
 	array = (int*) malloc(sizeof(int) * VECTOR_SIZE);
@@ -28,23 +26,20 @@ void initialize_vector() {
 	}
 }
 
+// Contar el numero de 3s en el arreglo
 void count_3s() {
 	int i = 0;
 	for (; i < VECTOR_SIZE; i++) {
 		if (array[i] == 3) count++;
 	}
 }
+// -=*=- FIN FUNCIONES AUXILIARES -=*=-
 
 int main(int argc, char* argv[]) {
 	int i = 0;
 	int err;
 	clock_t t1, t2;
 
-	if (argc == 2) {
-		max_threads = atoi(argv[1]);
-	} else {
-		max_threads = MAX_THREADS;
-	}
 	printf("Running 3s-00");
 	// random seed
 	// http://stackoverflow.com/questions/822323/how-to-generate-a-random-number-in-c
