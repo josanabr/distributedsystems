@@ -7,12 +7,14 @@
 #define VECTOR_SIZE 1000000000
 
 pthread_t tid[MAX_THREADS]; 
+// Definicion de un candado para arbitrar el acceso
+// a una variable compartida
 pthread_mutex_t mutex; 
 int *array;
 int length = VECTOR_SIZE;
+// La variable compartida
 int count = 0;
 int double_count = 0;
-int t = MAX_THREADS;
 int max_threads = 0;
 
 void *count3s_thread(void *arg) {
@@ -30,6 +32,7 @@ void *count3s_thread(void *arg) {
 		}
 	}
 	pthread_mutex_unlock(&mutex);
+	return NULL;
 }
 
 
@@ -70,7 +73,9 @@ int main(int argc, char* argv[]) {
 	printf("Vector initialized!\n");
 	fflush(stdout);
 	t1 = clock();
+	// El candado que evita la concurrencia
 	pthread_mutex_init(&mutex,NULL);
+	// Bucle que crea los hilos
 	while (i < max_threads) {
 		err = pthread_create(&tid[i], NULL, &count3s_thread, (void*)i);
 		if (err != 0) 
@@ -81,6 +86,7 @@ int main(int argc, char* argv[]) {
 	}
 	// https://computing.llnl.gov/tutorials/pthreads/#Joining
 	i = 0;
+	// Bucle que espera por la terminacion de los hilos
 	for (; i < max_threads; i++) {
 		void *status;
 		int rc;
