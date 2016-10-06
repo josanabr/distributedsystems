@@ -6,14 +6,20 @@
 #define MAX_THREADS 8
 #define VECTOR_SIZE 1000000000
 
+// Vector de identificadores de hilos
 pthread_t tid[MAX_THREADS];
 
+// Un apuntador a un vector de enteros
 int *array;
+// Maxima longitud del vector
 int length = VECTOR_SIZE;
 int count = 0;
 int double_count = 0;
+// Maximo numero de hilos
 int max_threads = MAX_THREADS;
 
+// Funcion usada por la funcion 'pthread_create'. 'pthread_create' crea un nuevo
+// hilo quien se dedicara a ejecutar esta funcion
 void *count3s_thread(void *arg) {
 	int i;
 	int length_per_thread = length/max_threads;
@@ -28,7 +34,8 @@ void *count3s_thread(void *arg) {
 	}
 }
 
-
+// Funcion que inicializa los elementos del vector y cuenta cuantas veces se
+// genero el numero '3'
 void initialize_vector() {
 	int i = 0;
 	array = (int*) malloc(sizeof(int) * VECTOR_SIZE);
@@ -43,10 +50,13 @@ void initialize_vector() {
 	}
 }
 
+// Metodo principal
 int main(int argc, char* argv[]) {
 	int i = 0;
 	int err;
 	clock_t t1, t2;
+	// Se puede pasar por argumentos el numero de hilos que se quiere se
+	// invoquen para procesar el vector
 	if (argc == 2) {
 		max_threads = atoi(argv[1]);
 		if (max_threads > MAX_THREADS)
