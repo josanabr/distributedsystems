@@ -1,7 +1,16 @@
 # OpenMP una librería para programación en paralelo
 
-En este repositorio encontrará algunos ejemplos sobre OpenMP que se presentaron durante la clase del respectivo tema.
+En este repositorio encontrará algunos ejemplos sobre OpenMP que se presentaron durante la clase.
 
+Para compilar los programas se ejecutan los siguientes comandos, para Linux:
+```
+gcc -fopenmp <archivo.c> -o <archivo>
+```
+Para Mac OS X:
+```
+clang-omp -fopenmp <archivo.c> -o <archivo>
+```
+En lo que queda del documento se asume que se esta haciendo la ejecución de los ejemplos desde un sistema Linux.
 ## Contenido de este repositorio
 
 Este repositorio contiene varios ejemplos que le permitirán familiarizarse con OpenMP. 
