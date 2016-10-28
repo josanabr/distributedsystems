@@ -11,6 +11,26 @@ Para Mac OS X:
 clang-omp -fopenmp <archivo.c> -o <archivo>
 ```
 En lo que queda del documento se asume que se esta haciendo la ejecución de los ejemplos desde un sistema Linux.
+
+
+Dos ejemplos secuenciales
+-------------------------
+
+A continuación se describirán dos ejemplos que son perfectamente paralelizables
+
+* Un programa que se encarga de copiar un conjunto de archivos del directorio actual a un directorio destino
+
+* Un programa que se encarga de multiplicar cada posición de un vector por un valor constante
+
+### Copia de archivos a otro directorio
+
+Suponga que usted ha desarrollado un programa en C que copia un conjunto de archivos a un directorio. 
+Aquí el código.
+
+```
+#include <stdio.h>
+```
+
 ## Contenido de este repositorio
 
 Este repositorio contiene varios ejemplos que le permitirán familiarizarse con OpenMP. 

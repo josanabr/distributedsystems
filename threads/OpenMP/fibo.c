@@ -23,6 +23,8 @@ int main(int argc, char** argv) {
 	
 	sum = 0;
 	initrandomico();
+	printf("%d\n",fibonacci(10));
+	return 0;
 	for (i = 0; i < MAXITER; i++) {
 		sum += fibonacci(randomico(20));
 	}
