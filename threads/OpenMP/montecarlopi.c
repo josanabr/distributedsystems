@@ -11,7 +11,7 @@ double random_low, random_hi;
 Functions used to generate random numbers
 */
    
-double random()   
+double randomi()   
 {   
     long random_next;   
     double ret_val;   
@@ -45,7 +45,7 @@ void seed(double low_in, double hi_in)
 // parallel one
 //   
    
-static long num_trials = 100000;   
+static long num_trials = 1000000000;   
    
 int main ()   
 {   
@@ -57,8 +57,8 @@ int main ()
    
    for(i=0;i<num_trials; i++)   
    {   
-      x = random();    
-      y = random();   
+      x = randomi();    
+      y = randomi();   
    
       test = x*x + y*y;   
    
@@ -67,7 +67,7 @@ int main ()
    
     pi = 4.0 * ((double)Ncirc/(double)num_trials);   
    
-    printf("\n %d trials, pi is %f \n",num_trials, pi);   
+    printf("\n %ld trials, pi is %f \n",num_trials, pi);   
    
     return 0;   
 }   
