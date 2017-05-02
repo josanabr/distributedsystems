@@ -10,6 +10,7 @@ Para compilar este programa ejecute las siguientes instrucciones
 	mpicc mpiExample1.c -o mpiExample1
 ```
 
-### Ejercicios
+
+### Ejercicios 
 
 * as
