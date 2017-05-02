@@ -29,6 +29,32 @@ localhost
 
 En este programa se muestra el uso de las siguientes funciones
 
-* **MPI_Comm_rank** esta funcion indica que identificador tiene este proceso en 
+* **MPI_Comm_size** esta funcion determina el numero de procesos que forman parte de la ejecucion de la aplicacion MPI
 
-* as
+* **MPI_Comm_rank** esta funcion indica que identificador tiene este proceso dentro del conjunto de procesos que forman parte de la ejecucion de esta aplicacion.
+El proceso cuyo rango es `0` se identifica como el maestro de la ejecucion de este proceso.
+
+### Ejercicios 
+
+* Cree un repositorio en GitHub llamado, **LS-05-02-2017-<sucodigo>**.
+
+* Cree un directorio en su computador de trabajo llamado *LS-05-02-2017*. 
+Inicialize este directorio de modo que pueda ser usado por el comando `git`.
+
+* Cree un archivo `README.md` que contenga su
+	* codigo de estudiante
+	* descripcion del contenido de este repositorio
+
+* Escriba un programa que imprima un mensaje diciendo
+	* En el maestro
+
+```
+Yo soy el maestro
+```
+	* En los otros procesos 
+```
+
+Yo soy un nodo de procesamiento con identificador N
+```
+
+Donde `N` es el identificador del proceso.
