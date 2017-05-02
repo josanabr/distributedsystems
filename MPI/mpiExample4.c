@@ -11,21 +11,17 @@ int main(int argc,char *argv[]){
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-	start = rank*(upToVal/size) + 1;
-    	if(rank==(size-1)){
-    		end = upToVal;
-    	}else{
-    		end = start + (upToVal/size)-1;
-    	}
+	// Defina aqui el segmento que debe procesar una tarea
+	// El inicio del segmento en la variable 'start', el fin del segmento
+	// la variable 'end'
     	sum = 0;
-    	sumTotal=0;
     	for(i=start; i<= end; i++){
     		sum = sum +i;
     	}
-    	// insert your code here
+	// Utilice la funcion 'MPI_Reduce' para guardar en la variable 
+	// 'sumTotal' la suma parcial de todos las tareas 
+	printf ("\nTotal: %d\n",sumTotal);
 
-    	printf("\nRank: %d, sum: %d, sumTotal: %d, start: %d, end: %d\n", rank, sum, sumTotal, start, end);
-	
 	MPI_Finalize();
 	
 	return 0;
