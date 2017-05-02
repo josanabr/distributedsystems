@@ -46,18 +46,5 @@ Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 	* descripcion del contenido de este repositorio
 
 * Escriba un programa que imprima un mensaje diciendo
-	* En el maestro
-
-```
-Yo soy el maestro
-```
-
-
-	* En los otros procesos 
-
-
-```
-Yo soy un nodo de procesamiento con identificador N
-```
-
-Donde `N` es el identificador del proceso.
+	* En el maestro `Yo soy el maestro`
+	* En los otros procesos `Yo soy un proceso con identificador N`. Donde `N` es el identificador del proceso.
