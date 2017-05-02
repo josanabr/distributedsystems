@@ -46,5 +46,11 @@ Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 	* descripcion del contenido de este repositorio
 
 * Escriba un programa que imprima un mensaje diciendo
-	* En el maestro `Yo soy el maestro`
-	* En los otros procesos `Yo soy un proceso con identificador N`. Donde `N` es el identificador del proceso.
+	* En el maestro `Yo soy el maestro y existen N procesos corriendo`
+	* En los otros procesos `Yo soy un proceso con identificador M de N procesos en ejecucion`. Donde, `N` es el total de procesos en ejecucion y `M` es el identificador del proceso.
+	* Guarde este codigo con el nombre `mpiEx1a.c`. Súbalo a su repositorio.
+	* Ejecute este programa con 2, 4 y 8; procesos.
+
+* Escriba un programa en el cual **solo** el maestro imprima el numero total de procesos en ejecucion.
+	* Guarde este codigo con el nombre `mpiEx1b.c`. Súbalo a su repositorio.
+	* Ejecute este programa con 2, 4 y 8; procesos.
