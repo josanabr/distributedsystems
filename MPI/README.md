@@ -51,9 +51,10 @@ Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 ```
 Yo soy el maestro
 ```
-	* En los otros procesos 
-```
 
+	* En los otros procesos 
+
+```
 Yo soy un nodo de procesamiento con identificador N
 ```
 
