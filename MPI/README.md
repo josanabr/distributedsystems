@@ -66,5 +66,4 @@ Este codigo muestra en operacion las funciones `MPI_Send` y `MPI_Recv`.
 * Modifique el codigo de `mpiExample3.c` y cree un nuevo programa llamado `mpiEx3a.c` de modo que en lugar de intercambiar caracteres, se intercambien enteros. Suba su codigo a su repositorio de GitHub. 
 **Hint:** El tipo de dato para enteros en MPI es `MPI_INT`.
 
-* Escriba un programa de MPI que tenga 6 procesos y se comporte como sugiere la siguiente figura.
-![xxx](https://drive.google.com/file/d/0B7n65I8SStKXVlZWaThoWEpYMG8/view?usp=sharing)
+* Escriba un programa de MPI que tenga 6 procesos y se comporte como sugiere la siguiente [figura](https://drive.google.com/file/d/0B7n65I8SStKXVlZWaThoWEpYMG8/view?usp=sharing).
