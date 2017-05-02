@@ -7,10 +7,10 @@ Este directorio contiene los siguientes archivos
 Para compilar este programa ejecute las siguientes instrucciones
 
 ```
-	mpicc mpiExample1.c -o mpiExample1
+mpicc mpiExample1.c -o mpiExample1
 ```
 
 
-### Ejercicios 
+### Ejercicios ###
 
 * as
