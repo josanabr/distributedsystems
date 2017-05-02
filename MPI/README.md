@@ -55,9 +55,11 @@ Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 	* Guarde este codigo con el nombre `mpiEx2b.c`. Súbalo a su repositorio.
 	* Ejecute este programa con 2, 4 y 8; procesos.
 
-## mpiExample3.c
+## mpiExample3.c
 
 Este codigo muestra en operacion las funciones `MPI_Send` y `MPI_Recv`.
+
+### Ejercicios
 
 * Compile este programa y luego ejecutelo de modo que **unicamente** dos procesos se ejecuten.
 
