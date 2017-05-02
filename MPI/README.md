@@ -48,9 +48,21 @@ Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 * Escriba un programa que imprima un mensaje diciendo
 	* En el maestro `Yo soy el maestro y existen N procesos corriendo`
 	* En los otros procesos `Yo soy un proceso con identificador M de N procesos en ejecucion`. Donde, `N` es el total de procesos en ejecucion y `M` es el identificador del proceso.
-	* Guarde este codigo con el nombre `mpiEx1a.c`. Súbalo a su repositorio.
+	* Guarde este codigo con el nombre `mpiEx2a.c`. Súbalo a su repositorio.
 	* Ejecute este programa con 2, 4 y 8; procesos.
 
 * Escriba un programa en el cual **solo** el maestro imprima el numero total de procesos en ejecucion.
-	* Guarde este codigo con el nombre `mpiEx1b.c`. Súbalo a su repositorio.
+	* Guarde este codigo con el nombre `mpiEx2b.c`. Súbalo a su repositorio.
 	* Ejecute este programa con 2, 4 y 8; procesos.
+
+## mpiExample3.c
+
+Este codigo muestra en operacion las funciones `MPI_Send` y `MPI_Recv`.
+
+* Compile este programa y luego ejecutelo de modo que **unicamente** dos procesos se ejecuten.
+
+* Modifique el codigo de `mpiExample3.c` y cree un nuevo programa llamado `mpiEx3a.c` de modo que en lugar de intercambiar caracteres, se intercambien enteros. Suba su codigo a su repositorio de GitHub. 
+**Hint:** El tipo de dato para enteros en MPI es `MPI_INT`.
+
+* Escriba un programa de MPI que tenga 6 procesos y se comporte como sugiere la siguiente figura.
+![xxx](https://drive.google.com/file/d/0B7n65I8SStKXVlZWaThoWEpYMG8/view?usp=sharing)
