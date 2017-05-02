@@ -11,6 +11,6 @@ mpicc mpiExample1.c -o mpiExample1
 ```
 
 
-### Ejercicios ###
+#### Ejercicios ####
 
 * as
