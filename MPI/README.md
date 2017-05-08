@@ -92,3 +92,33 @@ Escriba un programa en C que calcule el valor de **pi** haciendo uso de la funci
 	* Por que piensa que es importante MPI en un problema como el del calculo de **pi** usando la aproximacion Montecarlo?
 	* Para que tipo de problemas entonces es apropiado MPI?
 
+## mpiBroadcast.c
+
+Este código muestra el uso de la función `MPI_Broadcast` la cual tiene el siguiente prototipo
+
+```
+MPI_Bcast(
+	void *data,
+	int numelem,
+	int datatype,
+	int root,
+	int communicator
+);
+```
+
+* `data` es el buffer que contiene los datos a ser enviados
+* `numelem` indica el numero de elementos que hay en el buffer y que se van a enviar
+* `datatype` define el tipo de dato a ser usado
+* `root` indica cual es el nodo raiz desde donde se enviaran los datos a los demas nodos
+* `communicator` el entorno en el cual estan los nodos que se usarán para la comunicación
+
+En este código en particular, se define un arreglo de tamaño `MAXARRAY` y desde el nodo raíz (0) se inicializa el vector y luego se envía este vector a los demás nodos del comunicador `MPI_COMM_WORLD`.
+
+Para evitar el volumen de mensajes, solo el proceso cuyo `rank` es '1' hará la visualización del vector antes y después de haber recibido el vector con la función `MPI_Bcast`.
+
+### Ejercicios
+
+* Escriba su propia version de `MPI_Bcast` pero usando las primitivas `MPI_Send` y `MPI_Recv`. Esta funcion, que llamará `myBcast` debe recibir los mismos parámetros de la función `MPI_Bcast` y al interior debe tener algo como lo siguiente,
+	* Si es el nodo raiz, a través de un ciclo, va por todos los procesos en el comunicador y les envía los datos requeridos
+	* Si no es el nodo raíz, el proceso se queda esperando a recibir los datos
+
