@@ -100,9 +100,9 @@ Este código muestra el uso de la función `MPI_Broadcast` la cual tiene el sigu
 MPI_Bcast(
 	void *data,
 	int numelem,
-	int datatype,
+	MPI_Datatype datatype,
 	int root,
-	int communicator
+	MPI_Comm communicator
 );
 ```
 
