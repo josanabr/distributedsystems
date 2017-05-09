@@ -122,3 +122,14 @@ Para evitar el volumen de mensajes, solo el proceso cuyo `rank` es '1' hará la 
 	* Si es el nodo raiz, a través de un ciclo, va por todos los procesos en el comunicador y les envía los datos requeridos
 	* Si no es el nodo raíz, el proceso se queda esperando a recibir los datos
 
+
+## Axb.c
+
+Este programa en C busca implementar la multiplicacion matrix x vector. 
+Este programa tiene una buena parte del codigo ya implementado pero usted debe 
+implementar dos funciones especificas ejecutadas por el maestro y los procesos. 
+El codigo esta ampliamente comentado.
+
+### Ejercicios
+
+Implementar las funciones `distributereceive` y `receive`, funciones usadas por el maestro y los procesos, respectivamente.
