@@ -14,7 +14,7 @@ int main(int argc, char* argv[]){
 	/* find out number of processes */
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 	
-    	printf("\nHello MPI World from process %d!", rank);
+    	printf("Hello MPI World from process %d!\n", rank);
 
 	/* shut down MPI */
 	MPI_Finalize(); 

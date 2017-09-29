@@ -36,9 +36,9 @@ El proceso cuyo rango es `0` se identifica como el maestro de la ejecucion de es
 
 ### Ejercicios
 
-* Cree un repositorio en GitHub llamado, **LS-05-02-2017-<sucodigo>**.
+* Cree un repositorio en GitHub llamado, **Electiva-Fall-2017-<sucodigo>**.
 
-* Cree un directorio en su computador de trabajo llamado *LS-05-02-2017*. 
+* Cree un directorio en su computador de trabajo llamado *Electiva-Fall-2017*. 
 Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 
 * Cree un archivo `README.md` que contenga su
