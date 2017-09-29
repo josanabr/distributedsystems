@@ -2,10 +2,10 @@
 #include "mpi.h"
 
 int main(int argc,char *argv[]){
-	int i, sum, sumTotal, upToVal;
+	int i, sum, sumTotal, maxVal;
 	int start, end, size, rank;
 
-	upToVal = 10000;
+	maxVal = 10000;
 
 	MPI_Init(&argc,&argv);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
