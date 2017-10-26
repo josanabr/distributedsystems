@@ -133,3 +133,8 @@ El codigo esta ampliamente comentado.
 ### Ejercicios
 
 Implementar las funciones `distributereceive` y `receive`, funciones usadas por el maestro y los procesos, respectivamente.
+
+### Enlaces adicionales
+
+- [Tutorial de Lawrence Livermore National Laboratory](https://computing.llnl.gov/tutorials/mpi/)
+- [Tutorial MPI](http://mpitutorial.com/tutorials/)
