@@ -1,7 +1,7 @@
 # Principles of Parallel Programming - Chapter One
 ## Threads in C
 
-### A gentle introduction
+### A gentle introduction
 
 The first example is `thread_101_1.c`. This program exhibits how interact with pthread methods such as `pthread_create` and `pthread_join`.
 
