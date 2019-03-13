@@ -1,0 +1,82 @@
+# Enviando y recibiendo datos con MPI
+
+* Process *A* envia datos proceso *B*
+* La información se pone en *buffers* llamados *sobres*
+* El *rank* del proceso determina como se enruta el paquete
+* Entre *A* y *B* se pueden enviar diferentes tipos de mensajes los cuales se diferencian por *tags*
+
+---
+
+# Enviando datos
+
+``
+MPI_Send(
+    void* data,
+    int count,
+    MPI_Datatype datatype,
+    int destination,
+    int tag,
+    MPI_Comm communicator)
+
+``
+
+---
+
+# Recibiendo datos
+
+``
+MPI_Recv(
+    void* data,
+    int count,
+    MPI_Datatype datatype,
+    int source,
+    int tag,
+    MPI_Comm communicator,
+    MPI_Status* status)
+
+``
+
+---
+
+# Datos de MPI
+
+``
+
+MPI_SHORT               short int
+MPI_INT                 int
+MPI_LONG                long int
+MPI_LONG_LONG           long long int
+MPI_UNSIGNED_CHAR       unsigned char
+MPI_UNSIGNED_SHORT      unsigned short int
+MPI_UNSIGNED            unsigned int
+MPI_UNSIGNED_LONG       unsigned long int
+MPI_UNSIGNED_LONG_LONG  unsigned long long int
+MPI_FLOAT               float
+MPI_DOUBLE              double
+MPI_LONG_DOUBLE         long double
+MPI_BYTE                char
+
+``
+
+---
+
+# Ejemplo *Send/Receive*
+
+[Codigo](https://github.com/wesleykendall/mpitutorial/blob/gh-pages/tutorials/mpi-send-and-receive/code/send_recv.c)
+
+---
+
+# Ejercicio
+
+Haga un programa que permita el envio y recepción de un caracter. 
+Uno de los procesos en MPI (cuyo `rank` = 0) envia un caracter a su proceso homólogo. 
+El proceso homólogo valida si el caracter está en minúscula o mayúscula.
+Si el caracter está en minúscula lo convierte a mayúscula o visceversa.
+Después de hacer la conversión envia el caracter de vuelta.
+
+---
+
+# Manipulando vectores
+
+---
+

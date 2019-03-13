@@ -17,4 +17,23 @@
 
 * A sudden death of a child process causes to remain in  `defunct` state
 * `defunct` processes are usually killed by `init` process
-* Let's an example
+* Let's see an [example](https://raw.githubusercontent.com/josanabr/distributedsystems/master/fork/01-fork.c)
+
+---
+
+# Comments about first example
+
+* 
+* `WEXITSTATUS()` is a macro defined in `<sys/waith.h>`
+
+---
+
+# Let us check more `fork()` examples
+
+[More examples](https://github.com/josanabr/distributedsystems/tree/master/fork)
+
+---
+
+# A minimal tiny web server
+
+
