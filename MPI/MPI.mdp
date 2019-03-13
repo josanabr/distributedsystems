@@ -78,5 +78,40 @@ Después de hacer la conversión envia el caracter de vuelta.
 
 # Manipulando vectores
 
+Revisar el siguiente código [mpiExample5](https://github.com/josanabr/distributedsystems/blob/master/MPI/mpiExample5.c)
+
+## Hágalo usted mismo
+
+* Modificar el codigo anterior de modo que quien reciba el vector se encargue de elevar al cuadrado cada elemento del vector y se lo envie de vuelta al emisor original del vector
+
 ---
 
+# Manipulando vectores
+
+## Hágalo usted mismo
+
+* Modificar el código anterior de modo que se haga la suma parcial de cada uno de los elementos del vector y sea el proceso cuyo `rank` es 0 quien haga la suma total del vector.  Por ejemplo, envie a ejecutar el proceso con 4 nodos de procesamiento, a cada nodo le corresponde sumar una parte del vector:
+
+  * `rank = 0`: 0 - 4
+  * `rank = 1`: 5 - 9
+  * `rank = 2`: 10 - 14
+  * `rank = 3`: 15 - 19
+
+El proceso con `rank = 0` se encargará de sumar los resultados parciales
+
+---
+
+
+# Ejercicio
+
+## Hágalo usted mismo
+
+La integral de una función se define como el área bajo la curva. Aunque las funciones son continuas y los computadores son discretas, el área bajo la curva se puede aproximar haciendo sumas parciales del área de rectangulos que se inscriben bajo la curva. [Imagen](https://activecalculus.org/single/images/8_3_Integral_test1.svg)
+
+---
+
+# Ejercicio
+
+## Hágalo usted mismo
+
+Calcule el valor del número Pi siguiendo la descripción dada en este [enlace](https://computing.llnl.gov/tutorials/mpi/#Point_to_Point_Routines)
