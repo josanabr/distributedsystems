@@ -1,3 +1,20 @@
+/**
+
+En este programa se incorpora la invocacion del metodo correspondiente a la
+espera de la terminacion de la ejecucion de los hilos creados en este programa.
+---
+NOTA AL MARGEN:
+Si usted esta usando el editor 'vi' y se encuentra en modo de comando ejecutar
+la siguiente secuencia de teclas ':set number'
+---
+Esta espera se hace a traves de la funcion 'pthread_join()' y se encuentra en
+las lineas 103-113.
+
+Que problema presenta esta solucion ahora?
+
+Author: John Sanabria - john.sanabria@correounivalle.edu.co
+Date: 2019-09-17
+*/
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -97,7 +114,6 @@ int main(int argc, char* argv[]) {
 	t2 = clock();
 	printf("[3s-02] Count by threads %d\n", count);
 	printf("[3s-02] Double check %d\n", double_count);
-	//printf("[[3s-02] Elapsed time %ld ms\n", ((double)t2 - t1) / CLOCKS_PER_SEC * 1000);
 	printf("[[3s-02] Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
 	return 0;
 }

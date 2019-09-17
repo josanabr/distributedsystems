@@ -1,3 +1,17 @@
+/**
+Esta es una version que presenta unos tiempos de ejecucion menores y cuya 
+estrategia es proveer a cada hilo una variable privada la cual este puede 
+modificar libremente mientras ejecuta el analisis de los valores en el arreglo.
+Una vez se ha procesado la parte del vector que le corresponde al hilo entonces
+el valor parcial es sumado a una variable global.
+El problema ahora de la variable compartida se centra no solamente en una parte
+pequeña del codigo sino que ademas esa zona es atravesada en total el numero
+de hilos que se lanzaron para ejecutar la tarea.
+
+Author: John Sanabria - john.sanabria@correounivalle.edu.co
+Date: 2019-09-17
+*/
+
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -75,7 +89,6 @@ int main(int argc, char *argv[]) {
 	fflush(stdout);
 	t1 = clock();
 	pthread_mutex_init(&mutex,NULL);
-	// bucle usado para crear los hilos
 	while (i < max_threads) {
 		private_count[i] = 0;
 		err = pthread_create(&tid[i], NULL, &count3s_thread, (void*)i);
@@ -87,7 +100,6 @@ int main(int argc, char *argv[]) {
 	}
 	// https://computing.llnl.gov/tutorials/pthreads/#Joining
 	i = 0;
-	// bucle usado para esperar por la terminacion de los hilos
 	for (; i < max_threads; i++) {
 		void *status;
 		int rc;
@@ -103,7 +115,6 @@ int main(int argc, char *argv[]) {
 	printf("[3s-05] Double check %d\n", double_count);
 	pthread_mutex_destroy(&mutex);
 	t2 = clock();
-	//printf("[[3s-05] Elapsed time %ld ms\n", ((double)t2 - t1) / CLOCKS_PER_SEC * 1000);
 	printf("[[3s-05] Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
 	pthread_exit(NULL);
 	return 0;

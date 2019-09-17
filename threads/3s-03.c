@@ -1,3 +1,17 @@
+/**
+
+Esta es una version un poco mas elaborada del programa que permite contar el 
+numero de '3's que se encuentran en un arreglo. En este caso lo que se hace
+es crear un 'candado' para garantizar el acceso de forma unica a una variable
+compartida que para efectos de este problema es la variable 'count'.
+
+Observe el lugar donde se usa la variable 'candado'. Observando el lugar donde
+se usa, que comportamiento le sugiere tendra este programa?
+
+Author: John Sanabria - john.sanabria@correounivalle.edu.co
+Date: 2019-09-17
+
+*/
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,21 +21,16 @@
 #define VECTOR_SIZE 100000000
 
 pthread_t tid[MAX_THREADS]; 
-// Definicion de un candado para arbitrar el acceso
-// a una variable compartida
-pthread_mutex_t mutex; 
+pthread_mutex_t mutex; // Definicion de un candado
 int *array;
 int length = VECTOR_SIZE;
-// La variable compartida
-int count = 0;
+int count = 0; // La variable compartida
 int double_count = 0;
 int max_threads = 0;
 
 void *count3s_thread(void *arg) {
 	int i;
 	int length_per_thread = length/max_threads;
-	// Cast -> http://stackoverflow.com/questions/1640423/error-cast-from-void-to-int-loses-precision
-	//int id = *((int*)(&arg));
 	int id = (int)arg;
 	int start = id * length_per_thread;
 	printf("\tThread [%d] starts [%d] length [%d]\n",id, start, length_per_thread);
@@ -102,7 +111,6 @@ int main(int argc, char* argv[]) {
 	printf("[3s-03] Count by threads %d\n", count);
 	printf("[3s-03] Double check %d\n", double_count);
 	pthread_mutex_destroy(&mutex);
-	//printf("[[3s-03] Elapsed time %ld ms\n", ((double)t2 - t1) / CLOCKS_PER_SEC * 1000);
 	printf("[[3s-03] Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
 	pthread_exit(NULL);
 	return 0;

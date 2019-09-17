@@ -1,9 +1,17 @@
+/**
+Este programa es una primera aproximacion a la solucion de contar el numero de
+apariciones del numero '3' en un arreglo de 100,000,000 de posiciones.
+
+Author: John Sanabria - john.sanabria@correounivalle.edu.co
+Date: 2091-09-17
+*/
+
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_THREADS 8
+#define MAX_THREADS 8 // se crearan '8' hilos
 #define VECTOR_SIZE 100000000
 
 // Vector de identificadores de hilos
@@ -20,6 +28,13 @@ int max_threads = MAX_THREADS;
 
 // Funcion usada por la funcion 'pthread_create'. 'pthread_create' crea un nuevo
 // hilo quien se dedicara a ejecutar esta funcion
+// El argumento '*arg' contendra el identificador del hilo o el numero del hilo
+// creado. Se comienza en '0' hasta 'MAX_THREADS - 1'.
+// '*arg' le permite al hilo saber de que parte del arreglo se debe encargar 
+// para contar los '3's que aparezcan en su parte del vector.
+//
+// Despues del metodo 'main()' se plantean algunas preguntas. 
+//
 void *count3s_thread(void *arg) {
 	int i;
 	int length_per_thread = length/max_threads;
@@ -75,6 +90,7 @@ int main(int argc, char* argv[]) {
 	printf("Vector initialized!\n");
 	fflush(stdout);
 	t1 = clock();
+	// ciclo donde se crean 'max_threas' hilos de ejecucion
 	while (i < max_threads) {
 		err = pthread_create(&tid[i], NULL, &count3s_thread, (void*)i);
 		if (err != 0) 
@@ -86,9 +102,15 @@ int main(int argc, char* argv[]) {
 	t2 = clock();
 	printf("[3s-01] Count by threads %d\n", count);
 	printf("[3s-01] Double check %d\n", double_count);
-	//printf("[[3s-01] Elapsed time %ld ms\n", (ti2 - t1) / CLOCKS_PER_SEC * 1000);
 	printf("[[3s-01] Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
 
 	return 0;
 }
 
+//
+// PREGUNTAS
+//
+// Que le hace falta a este programa?
+// Como identificar el numero de hilos que tiene el ordenador? 
+// (https://stackoverflow.com/questions/4586405/how-to-get-the-number-of-cpus-in-linux-using-c)
+//

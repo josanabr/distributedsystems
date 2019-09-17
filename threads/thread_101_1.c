@@ -1,7 +1,21 @@
+/**
+Este programa muestra algunos elementos basicos para la programacion de hilos en
+el lenguaje C.
+
+- Inclusion del archivo de cabecera 'pthread.h'
+- Prototipo de la funcion que puede ser usada dentro de un hilo de ejecucion
+- Inclusion del tipo de dato 'pthread_t'
+- Uso de las funciones 'pthread_create' y 'pthread_join'
+- Paso de argumentos a la funcion que correra el hilo de ejecucion
+
+Author: John Sanabria - john.sanabria@correounivalle.edu.co
+Date: 2019-09-17
+
+*/
+
 #include <pthread.h>
 #include <stdio.h>
 
-//#define MAX 100000000
 #define MAX 100
 
 void *inc_x(void *x_void_ptr);

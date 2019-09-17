@@ -1,3 +1,14 @@
+/**
+
+Este es un codigo que ejemplifica una posible solucion para contar la aparicion
+del numero '3' en un vector de tamaño 100,000,000.
+Este programa se ejecuta en un solo hilo de ejecucion, el hilo del metodo 
+'main()'.
+
+Author: John Sanabria - john.sanabria@correounivalle.edu.co
+Date: 2019-09-17
+
+*/
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -37,7 +48,6 @@ void count_3s() {
 
 int main(int argc, char* argv[]) {
 	int i = 0;
-	int err;
 	clock_t t1, t2;
 
 	printf("Running 3s-00");

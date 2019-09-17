@@ -1,3 +1,16 @@
+/**
+
+Esta es una nueva version del programa que funciona de forma correcta pero que 
+en este caso la forma como se usa el 'candado' es diferente. 
+
+Que puede decir usted respecto a esta nueva version del programa? Compare en 
+tiempo de ejecucion esta version del programa versus la version anterior, que
+puede observar?
+
+Author: John Sanabria - john.sanabria@correounivalle.edu.co
+Date: 2019-09-17
+
+*/
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,7 +32,6 @@ void *count3s_thread(void *arg) {
 	int i;
 	int length_per_thread = length/max_threads;
 	// Cast -> http://stackoverflow.com/questions/1640423/error-cast-from-void-to-int-loses-precision
-	//int id = *((int*)(&arg));
 	int id = (int)arg;
 	int start = id * length_per_thread;
 	printf("\tThread [%d] starts [%d] length [%d]\n",id, start, length_per_thread);
@@ -97,7 +109,6 @@ int main(int argc, char* argv[]) {
 	printf("[3s-04] Count by threads %d\n", count);
 	printf("[3s-04] Double check %d\n", double_count);
 	pthread_mutex_destroy(&mutex);
-	//printf("[[3s-04] Elapsed time %ld ms\n", ((double)t2 - t1) / CLOCKS_PER_SEC * 1000);
 	printf("[[3s-04] Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
 	pthread_exit(NULL);
 	return 0;

@@ -1,8 +1,19 @@
+/**
+
+Este programa evidencia que cuando se trabaja con hilos, y en este caso 
+particular, existen al menos dos hilos de ejecucion: el del 'main' y el que se
+crea para ejecutar la funcion 'inc_x'.
+
+Que se observa que sucede? Que estuvo mal? Como corregir el problema?
+
+Author: John Sanabria - john.sanabria@correounivalle.edu.co
+Date: 2019-09-17
+
+*/
 #include <pthread.h>
 #include <stdio.h>
 
-//#define MAX 100000000
-#define MAX 100
+#define MAX 10000
 
 void *inc_x(void *x_void_ptr);
 
