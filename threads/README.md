@@ -48,6 +48,8 @@ For this problem two solutions are presented:
 
 * [mpithreads_threads.c](mpithreads_threads.c) a thread-based version
 
+**This code has been taken from [https://computing.llnl.gov/tutorials/pthreads/exercise.html](https://computing.llnl.gov/tutorials/pthreads/exercise.html)**
+
 ### Description of 3s-0\*.c
 
 Those programs, having `3s-0` as prefix, are implementations of an example described in chapter one of the Principles of Parallel Programming book.
