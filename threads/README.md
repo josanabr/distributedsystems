@@ -40,7 +40,7 @@ Those codes were taken from [this site](https://computing.llnl.gov/tutorials/pth
 
 ### Scalar product
 
-![](http://hyperphysics.phy-astr.gsu.edu/hbase/imgmec/vsc1a.png)
+![](fig/scalarproduct.png)
 
 ### Description of 3s-0\*.c
 
