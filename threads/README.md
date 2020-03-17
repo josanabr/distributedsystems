@@ -13,6 +13,16 @@ In order to compile the program run the following command
 Those programs, having `3s-0` as prefix, are implementations of an example described in chapter one of the Principles of Parallel Programming book.
 Please open each program and follow the instructions there. 
 
+### Description of `thread_exit.c`
+
+The code [`thread_exit.c`](thread_exit.c) uses some compilation directives in order to show how the use or lack of use of some functions calls affect the performance of a threads-based program. 
+
+The [`thread_exit.c`](thread_exit.c) can be compiled through the `make` command as follows:
+
+* `make te-00` this is a normal compilation of the code.
+* `make te-01` enables that during `PrintHello()` execution the `sleep()` function being called
+* `make te-02` avoids that `main()` thread invokes `thread_wait()`
+
 ## Final assignment
 
 * To implement the **Fourth Solution: Try 4** found in page 20 and compare the performance of your implementation with previous programs.
