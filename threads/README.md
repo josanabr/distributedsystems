@@ -1,16 +1,15 @@
 # Principles of Parallel Programming - Chapter One
-## Threads in C
 
-### A gentle introduction
+# Threads in C
+
+## A gentle introduction
 
 The first example is `thread_101_1.c`. This program exhibits how interact with pthread methods such as `pthread_create` and `pthread_join`.
 
 In order to compile the program run the following command
 `gcc -pthread thread_101_1.c -o thread_101_1`
 
-### Passing arguments
-
-### Description of `thread_exit.c`
+## The `thread_exit.c` function
 
 The code [`thread_exit.c`](thread_exit.c) uses some compilation directives in order to show how the use or lack of use of some functions calls affect the performance of a threads-based program. 
 
@@ -18,14 +17,14 @@ The [`thread_exit.c`](thread_exit.c) can be compiled through the `make` command 
 
 * `make te-00` this is a normal compilation of the code.
 * `make te-01` enables that during `PrintHello()` execution the `sleep()` function being called
-* `make te-02` avoids that `main()` thread invokes `thread_wait()`
+* `make te-02` avoids that `main()` thread invokes `pthread_exit()`
 
 
-** This code has been taken from [https://computing.llnl.gov/tutorials/pthreads/#CreatingThreads](https://computing.llnl.gov/tutorials/pthreads/#CreatingThreads) **
+**This code has been taken from [https://computing.llnl.gov/tutorials/pthreads/#CreatingThreads](https://computing.llnl.gov/tutorials/pthreads/#CreatingThreads)**
 
-### Passing arguments 
+## Passing arguments 
 
-As follows two examples about passing arguments to a new created thread. 
+As follows two examples about passing arguments to a new created thread are shown: 
 
 * [hello_arg1.c](hello_arg1.c) In this example a variable of a basic type is passed as argument
 
@@ -36,6 +35,12 @@ Those codes were taken from [this site](https://computing.llnl.gov/tutorials/pth
 * [hello_arg1.c](https://computing.llnl.gov/tutorials/pthreads/samples/hello_arg1.c)
 
 * [hello_arg2.c](https://computing.llnl.gov/tutorials/pthreads/samples/hello_arg2.c)
+
+## Examples of collaborative work
+
+### Scalar product
+
+![](http://hyperphysics.phy-astr.gsu.edu/hbase/imgmec/vsc1a.png)
 
 ### Description of 3s-0\*.c
 
