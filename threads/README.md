@@ -8,10 +8,7 @@ The first example is `thread_101_1.c`. This program exhibits how interact with p
 In order to compile the program run the following command
 `gcc -pthread thread_101_1.c -o thread_101_1`
 
-### Description of 3s-0\*.c
-
-Those programs, having `3s-0` as prefix, are implementations of an example described in chapter one of the Principles of Parallel Programming book.
-Please open each program and follow the instructions there. 
+### Passing arguments
 
 ### Description of `thread_exit.c`
 
@@ -22,6 +19,28 @@ The [`thread_exit.c`](thread_exit.c) can be compiled through the `make` command 
 * `make te-00` this is a normal compilation of the code.
 * `make te-01` enables that during `PrintHello()` execution the `sleep()` function being called
 * `make te-02` avoids that `main()` thread invokes `thread_wait()`
+
+
+** This code has been taken from [https://computing.llnl.gov/tutorials/pthreads/#CreatingThreads](https://computing.llnl.gov/tutorials/pthreads/#CreatingThreads) **
+
+### Passing arguments 
+
+As follows two examples about passing arguments to a new created thread. 
+
+* [hello_arg1.c](hello_arg1.c) In this example a variable of a basic type is passed as argument
+
+* [hello_arg2.c](hello_arg2.c) In this example a variable of a user defined type is passed as argument
+
+Those codes were taken from [this site](https://computing.llnl.gov/tutorials/pthreads/exercise.html#Exercise1):
+
+* [hello_arg1.c](https://computing.llnl.gov/tutorials/pthreads/samples/hello_arg1.c)
+
+* [hello_arg2.c](https://computing.llnl.gov/tutorials/pthreads/samples/hello_arg2.c)
+
+### Description of 3s-0\*.c
+
+Those programs, having `3s-0` as prefix, are implementations of an example described in chapter one of the Principles of Parallel Programming book.
+Please open each program and follow the instructions there. 
 
 ## Final assignment
 
