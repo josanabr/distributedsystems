@@ -55,6 +55,10 @@ For this problem two solutions are presented:
 Those programs, having `3s-0` as prefix, are implementations of an example described in chapter one of the Principles of Parallel Programming book.
 Please open each program and follow the instructions there. 
 
+![Single Thread](fig/SingleThread-3s.png)
+
+![Multiple Threads](fig/MultipleThread-3s.png)
+
 ## Final assignment
 
 * To implement the **Fourth Solution: Try 4** found in page 20 and compare the performance of your implementation with previous programs.
