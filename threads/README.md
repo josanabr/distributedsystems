@@ -42,6 +42,12 @@ Those codes were taken from [this site](https://computing.llnl.gov/tutorials/pth
 
 ![](fig/scalarproduct.png)
 
+For this problem two solutions are presented:
+
+* [mpithreads_serial.c](mpithreads_serial.c) a serial version
+
+* [mpithreads_threads.c](mpithreads_threads.c) a thread-based version
+
 ### Description of 3s-0\*.c
 
 Those programs, having `3s-0` as prefix, are implementations of an example described in chapter one of the Principles of Parallel Programming book.
