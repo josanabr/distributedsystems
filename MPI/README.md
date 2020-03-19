@@ -5,6 +5,7 @@ Este directorio contiene los siguientes archivos
 * [mpiExample1.c](#mpiExample1)
 * [mpiExample2.c](#mpiExample2)
 * [mpiExample3.c](#mpiExample3)
+* [mpiExample4.c](#mpiExample4)
 
 ---
 
@@ -67,16 +68,16 @@ Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 
 ### Ejercicios
 
-* Compile este programa y luego ejecutelo de modo que **unicamente** dos procesos se ejecuten.
+* Compile [este programa](mpiExample3.c) y luego ejecutelo de modo que **unicamente** dos procesos se ejecuten.
 
 * Modifique el codigo de `mpiExample3.c` y cree un nuevo programa llamado `mpiEx3a.c` de modo que en lugar de intercambiar caracteres, se intercambien enteros. Suba su codigo a su repositorio de GitHub. 
 **Hint:** El tipo de dato para enteros en MPI es `MPI_INT`.
 
 * Escriba un programa de MPI que tenga 6 procesos y se comporte como sugiere la siguiente [figura](https://drive.google.com/file/d/0B7n65I8SStKXVlZWaThoWEpYMG8/view?usp=sharing). El proceso 0 debe recibir el valor de 5, el proceso 1 debe recibir el valor de 0 y asi sucesivamente.
 
-## [mpiExample4.c](mpiExample4.c)
+## [mpiExample4](mpiExample4.c)
 
-Este programa que busca calcular la suma de los primeros 10000 numeros de forma distribuida. 
+Este programa busca calcular la suma de los primeros 10000 numeros de forma distribuida. 
 La idea es que cada nodo de procesamiento tome un rango de numeros y los procese. 
 Suponga que existen 5 procesos, la idea es entonces que
 
