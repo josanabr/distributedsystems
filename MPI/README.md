@@ -2,6 +2,12 @@
 
 Este directorio contiene los siguientes archivos
 
+* [mpiExample1.c](#mpiExample1.c)
+* [mpiExample2.c](#mpiExample2.c)
+* [mpiExample3.c](#mpiExample3.c)
+
+---
+
 ## [mpiExample1.c](mpiExample1.c)
 
 Este codigo muestra el uso de las funciones `MPI_init` y  `MPI_finalize`.
