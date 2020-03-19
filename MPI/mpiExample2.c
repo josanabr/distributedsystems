@@ -16,6 +16,9 @@ int main(int argc, char* argv[]){
 	
     	printf("Hello MPI World from process %d!\n", rank);
 
+	if (rank == size - 1) 
+		printf("[%d] Size: %d\n",rank, size);
+
 	/* shut down MPI */
 	MPI_Finalize(); 
 	
