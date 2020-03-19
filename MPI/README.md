@@ -2,7 +2,7 @@
 
 Este directorio contiene los siguientes archivos
 
-## mpiExample1.c
+## [mpiExample1.c](mpiExample1.c)
 
 Este codigo muestra el uso de las funciones `MPI_init` y  `MPI_finalize`.
 
@@ -25,7 +25,7 @@ Este archivo debe contener la siguiente informacion
 localhost
 ```
 
-## mpiExample2.c
+## [mpiExample2.c](mpiExample2.c)
 
 En este programa se muestra el uso de las siguientes funciones
 
@@ -36,9 +36,9 @@ El proceso cuyo rango es `0` se identifica como el maestro de la ejecucion de es
 
 ### Ejercicios
 
-* Cree un repositorio en GitHub llamado, **Electiva-Fall-2017-&lt;sucodigo&gt;**.
+* Cree un repositorio en GitHub llamado, **Electiva-Spring-2019-&lt;sucodigo&gt;**.
 
-* Cree un directorio en su computador de trabajo llamado *Electiva-Fall-2017*. 
+* Cree un directorio en su computador de trabajo llamado *Electiva-Spring-2019*. 
 Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 
 * Cree un archivo `README.md` que contenga su
@@ -55,7 +55,7 @@ Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 	* Guarde este codigo con el nombre `mpiEx2b.c`. Súbalo a su repositorio.
 	* Ejecute este programa con 2, 4 y 8; procesos.
 
-## mpiExample3.c
+## [mpiExample3.c](mpiExample3.c)
 
 Este codigo muestra en operacion las funciones `MPI_Send` y `MPI_Recv`.
 
@@ -68,7 +68,7 @@ Este codigo muestra en operacion las funciones `MPI_Send` y `MPI_Recv`.
 
 * Escriba un programa de MPI que tenga 6 procesos y se comporte como sugiere la siguiente [figura](https://drive.google.com/file/d/0B7n65I8SStKXVlZWaThoWEpYMG8/view?usp=sharing). El proceso 0 debe recibir el valor de 5, el proceso 1 debe recibir el valor de 0 y asi sucesivamente.
 
-## mpiExample4.c
+## [mpiExample4.c](mpiExample4.c)
 
 Este programa que busca calcular la suma de los primeros 10000 numeros de forma distribuida. 
 La idea es que cada nodo de procesamiento tome un rango de numeros y los procese. 
@@ -92,7 +92,7 @@ Escriba un programa en C que calcule el valor de **pi** haciendo uso de la funci
 	* Por que piensa que es importante MPI en un problema como el del calculo de **pi** usando la aproximacion Montecarlo?
 	* Para que tipo de problemas entonces es apropiado MPI?
 
-## mpiBroadcast.c
+## [mpiBroadcast.c](mpiBroadcast.c)
 
 Este código muestra el uso de la función `MPI_Broadcast` la cual tiene el siguiente prototipo
 
@@ -123,7 +123,7 @@ Para evitar el volumen de mensajes, solo el proceso cuyo `rank` es '1' hará la 
 	* Si no es el nodo raíz, el proceso se queda esperando a recibir los datos
 
 
-## Axb.c
+## [Axb.c](Axb.c)
 
 Este programa en C busca implementar la multiplicacion matrix x vector. 
 Este programa tiene una buena parte del codigo ya implementado pero usted debe 
