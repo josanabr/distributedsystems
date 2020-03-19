@@ -3,8 +3,8 @@
 Este directorio contiene los siguientes archivos
 
 * [mpiExample1.c](#mpiExample1)
-* [mpiExample2.c](#mpiExample2.c)
-* [mpiExample3.c](#mpiExample3.c)
+* [mpiExample2.c](#mpiExample2)
+* [mpiExample3.c](#mpiExample3)
 
 ---
 
@@ -31,7 +31,7 @@ Este archivo debe contener la siguiente informacion
 localhost
 ```
 
-## [mpiExample2.c](mpiExample2.c)
+## [mpiExample2](mpiExample2.c)
 
 En este programa se muestra el uso de las siguientes funciones
 
@@ -61,7 +61,7 @@ Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 	* Guarde este codigo con el nombre `mpiEx2b.c`. Súbalo a su repositorio.
 	* Ejecute este programa con 2, 4 y 8; procesos.
 
-## [mpiExample3.c](mpiExample3.c)
+## [mpiExample3](mpiExample3.c)
 
 Este codigo muestra en operacion las funciones `MPI_Send` y `MPI_Recv`.
 
