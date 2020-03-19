@@ -10,7 +10,7 @@ Este directorio contiene los siguientes archivos
 
 ## [mpiExample1](mpiExample1.c)
 
-Este codigo muestra el uso de las funciones `MPI_init` y  `MPI_finalize`.
+[Este código](mpiExample1.c) muestra el uso de las funciones `MPI_init` y  `MPI_finalize`.
 
 Para compilar este programa ejecute las siguientes instrucciones
 
@@ -33,7 +33,7 @@ localhost
 
 ## [mpiExample2](mpiExample2.c)
 
-En este programa se muestra el uso de las siguientes funciones
+En [este programa](mpiExample2.c) se muestra el uso de las siguientes funciones
 
 * **MPI_Comm_size** esta funcion determina el numero de procesos que forman parte de la ejecucion de la aplicacion MPI
 
@@ -63,7 +63,7 @@ Inicialize este directorio de modo que pueda ser usado por el comando `git`.
 
 ## [mpiExample3](mpiExample3.c)
 
-Este codigo muestra en operacion las funciones `MPI_Send` y `MPI_Recv`.
+[Este código](mpiExample3.c) muestra en operacion las funciones `MPI_Send` y `MPI_Recv`.
 
 ### Ejercicios
 
